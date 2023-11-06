@@ -1,0 +1,206 @@
+:root {
+   
+    --dark:#374151;
+    --darker:#1F2937;
+     --darkest:#111827;
+     --gray:#6B7280;
+     --light:#EEE;
+    --pink:#EC4899;
+    --purple:#8B5Cf6;
+}
+
+
+*{
+margin:0;
+box-sizing: border-box;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--dark);
+    color:white;
+}
+
+header{
+    padding:2rem 1rem;
+    max-width:800px;
+    width:100%;
+    margin:0 auto;
+}
+
+header h1{
+
+    font-size: 2.5rem;
+    font-weight: 300;
+    color:var(--gray);
+    margin-bottom: 1rem;
+}
+
+#new-task-form{
+    display:flex;
+}
+
+input , button{
+    border:none;
+    appearance: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input{
+     
+    flex:1 1 0%;
+    background-color: var(--darker);
+    padding:1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+     color:var(--light);
+     font-size: 1.25rem;
+}
+
+#new-task-input::placeholder{
+    color: var(--gray);
+}
+
+#new-task-submit{
+
+color:var(--pink);
+font-size: 1.25rem;
+font-weight: 700;
+cursor: pointer;
+background-image: linear-gradient(to right , var(--pink) , var(--purple));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+transition: 0.4s;
+}
+
+#new-task-submit::hover{
+    opacity:0.8;
+}
+#new-task-submit::active{
+    opacity: 0.6;
+}
+
+main{
+
+flex:1 1 0%;
+max-width: 800px;
+width:100%;
+margin:0 auto;
+
+}
+
+.task-list{
+   padding:1rem;
+}
+.task-list h2{
+font-size: 1.5rem;
+font-weight: 300;
+color:var(--gray);
+margin-bottom: 1rem;
+
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content .text{
+
+color:var(--light);
+display: block;
+font-size: 1.125rem;
+width: 100%;
+transition: 0.4s;
+
+}
+
+#tasks .task .content {
+    flex:1 1 0%;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color:var(--pink);
+}
+
+ #tasks .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+
+}
+
+
+.task .actions button{
+    cursor: pointer;
+    margin:0 0.5rem;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    transition: 0.4s;
+    font-weight: 700;
+}
+
+.task .actions button:hover{
+    opacity:0.8;
+}
+.task .actions button:active{
+    opacity: 0.6;
+}
+
+.task .actions .edit{
+    background-image: linear-gradient(to right , var(--pink) , var(--purple));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+
+.task .actions .delete{
+    color:crimson;
+}
+
+
+.task .actions .check {
+    color: var(--light);
+    background-color: var(--pink);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+  }
+  
+  .task .actions .check:hover {
+    opacity: 0.8;
+  }
+  
+  .task .actions .check:active {
+    opacity: 0.6;
+  }
+  
+  
+  .task.completed {
+    background-color: var(--dark); 
+  }
+  
+ 
+  .task.completed .content .text {
+    color: var(--gray);
+  }
+
+  
+.task.completed .content {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  
